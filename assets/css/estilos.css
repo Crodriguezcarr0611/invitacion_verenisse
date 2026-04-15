@@ -1,0 +1,267 @@
+/* Contenedor principal para centrarlo todo */
+.loader-container {
+  position: fixed; /* Ocupa toda la pantalla incluso al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff5f5; /* Color de fondo sólido para tapar lo de atrás */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* El número más alto posible */
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Estilos para el SVG del corazón */
+.heart-loader {
+  width: 80px;
+  height: auto;
+  fill: #e0245e; /* Color rojo/rosa del corazón */
+  /* Nombre de la animación | Duración | Curva de tiempo | Repetición */
+  animation: latido 1.2s ease-in-out infinite;
+}
+
+/* Texto opcional debajo del corazón */
+.loading-text {
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+/* Definición de la animación del latido (cambio de escala y opacidad) */
+@keyframes latido {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  15% {
+    transform: scale(1.25); /* Se agranda un poco */
+    opacity: 0.8;
+  }
+  30% {
+    transform: scale(1); /* Vuelve al tamaño normal */
+    opacity: 1;
+  }
+  45% {
+    transform: scale(1.15); /* Un segundo latido más pequeño */
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1); /* Regresa y espera */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1); /* Pausa antes del siguiente ciclo */
+  }
+}
+
+/************Fuentes de Eduardo y kathy y versículo******************************/
+
+.lavishly-yours-regular {
+  font-family: "Lavishly Yours", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+}
+
+.cormorant-upright-regular {
+  font-family: "Cormorant Upright", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.noto-serif-jp {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/**********************************************************************/
+button:focus, 
+.btn:focus, 
+.swal2-confirm:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.contenido-invitacion{
+    background-color: #e6e4dd;
+    display: none; /* Oculto por defecto */
+    transition: opacity 1.5s ease; /* Transición suave al aparecer */
+}
+
+.primera-seccion{
+    height: 550px;
+}
+
+.segunda-seccion{
+    height: 550px;
+}
+
+.segunda-seccion{
+    height: 550px;
+}
+
+.tercera-seccion{
+  margin-top: 0px; 
+  padding-top: 110px;
+  height: 550px;
+}
+
+.ceremonia-fiesta{
+  font-size: 25px; 
+  color: #604c38;
+}
+
+.cuarta-seccion{
+    margin-top: 100px;
+    height: 450px;
+}
+
+.quinta-seccion{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: -80px; 
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+
+#Eduardo-Kathy {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 50px;
+  color: #604c38;
+}
+
+#fecha{
+  font-family: Garamond; 
+  font-size: 15px; 
+  color: #604c38"
+}
+
+#versiculo{
+  font-size: 15px; 
+  color: #604c38
+}
+
+#mateo{
+  font-family: Garamond; 
+  font-size: 10px; 
+  color: #604c38
+}
+
+.hora{
+  border-color: #9294e6; 
+  border-width: 1px; 
+  border-style: solid; 
+  border-radius: 20px; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  font-weight: 600;
+}
+
+
+
+.contenedor-invitacion {
+  position: relative; /* Esto crea el "marco" de referencia */
+  width: 100%;
+  min-height: 250px;
+  /*border: 1px solid #ccc;*/
+  overflow: hidden; /* Evita que el SVG se salga si es muy grande */
+}
+
+.centrar{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  text-align: center; 
+}
+
+.decoracion-esquina {
+  position: absolute; /* Se "despega" del flujo y busca al padre relative */
+  top: 0;             /* Pegado arriba */
+  left: 0;            /* Pegado a la izquierda */
+  width: 180px;        /* Ajusta el tamaño a tu gusto */
+  height: auto;
+  z-index: 10;        /* Para que siempre esté por encima del texto */
+}
+
+.decoracion-hojas-fotos {
+  position: absolute; /* Se "despega" del flujo y busca al padre relative */
+  top: 0;             /* Pegado arriba */
+  left: 0;            /* Pegado a la izquierda */
+  width: 150px;        /* Ajusta el tamaño a tu gusto */
+  height: 150px;
+  z-index: 10;        /* Para que siempre esté por encima del texto */
+}
+
+.cuadrado-redondeado {
+  width: 70%;
+  height: 70%;
+  border-radius: 300px; /* Ajusta este valor para más o menos redondeo */
+  border: 2px solid #604C38;
+}
+
+.cuadrado-redondeado-interno {
+  width: 90%;
+  height: 90%;
+  background-size: cover;
+  background-position: center;
+  animation: cambioFondo 3s infinite;
+  border-radius: 300px;  
+  position: relative;
+  overflow: hidden;
+}
+
+.fondo {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  animation: fade 6s infinite;
+  z-index: 10;
+}
+
+.fondo1 {
+  background-size: cover;
+  background-image: url('../imagenes/imagen-carrusel1.png');
+  z-index: 10;
+}
+
+.fondo2 {
+  background-image: url('../imagenes/imagen-carrusel2.png');
+  background-size: cover;
+  animation-delay: 3s; /* Empieza a mitad del ciclo */
+  opacity: 0;
+  z-index: 10;
+}
+
+.hoja-derecha {
+  position: relative; 
+  top: -80px; 
+  left: 20px; 
+  background-color: red;
+}
+
+.hoja-izquierda {
+  position: relative; 
+  top: 320px; 
+  right: 190px; 
+  background-color: green;
+}
+
+@keyframes fade {
+  0%, 10% { opacity: 0; }
+  40%, 60% { opacity: 1; }
+  90%, 100% { opacity: 0; }
+}
