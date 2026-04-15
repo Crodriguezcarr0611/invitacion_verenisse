@@ -1,7 +1,7 @@
 function enviarConfirmacion() {
   Swal.fire({
     title: "¡Gracias por confirmar su asistencia!",
-    text: "Estamos emocionados de contar con ustedes en nuestro día especial. ¡Nos vemos pronto!",
+    text: "Estamos emocionados de contar contigo en nuestro día especial. ¡Nos vemos pronto!",
     icon: "success",
     // ANIMACIONES AQUÍ:
     showClass: {
@@ -23,9 +23,9 @@ function enviarConfirmacion() {
       emailjs
         .send("service_7z4jaug", "template_vtyjaje", {
           to_name:
-            "Nombre de invitados: Angélica y Analy- Confirmado para 02 personas",
+            "Nombre de invitados: Vere - Confirmado para 01 persona",
           from_name: "Invitado Confirmado",
-          message: "Angélica y Analy - Confirmado para 02 personas",
+          message: "Vere - Confirmado para 01 persona",
         })
         .then(
           function (response) {
@@ -65,7 +65,7 @@ function activarMusica() {
 document.addEventListener("DOMContentLoaded", function () {
   Swal.fire({
     icon: "question",
-    title: "¿Están listas?",
+    title: "¿Estás lista?",
     iconColor: "green",
     // ANIMACIONES AQUÍ:
     showClass: {
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     // BOTONES AQUÍ:
     confirmButtonText:
-      '<i class="bi bi-heart-fill me-2" style="color: #e0245e"></i>Sí, estamos listas! <i class="bi bi-heart-fill me-2" style="color: #e0245e;"></i>',
+      '<i class="bi bi-heart-fill me-2" style="color: #e0245e"></i>Sí, estoy lista! <i class="bi bi-heart-fill me-2" style="color: #e0245e;"></i>',
     customClass: {
       confirmButton:
         "btn btn-warning mr-2 animate__animated animate__pulse animate__infinite",
